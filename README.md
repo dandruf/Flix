@@ -21,6 +21,8 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthrough GIF
 <img src="https://i.imgur.com/ai0ahqH.gif" width="250" />
+<img src="https://i.imgur.com/7DRUTtr.gif" height="250" />
+<img src="https://i.imgur.com/e16PkhD.gif" width="250" />
 
 ### Notes
 - I originally applied strict leading and trailing constraints to the Launching Storyboard, causing the centered logo to continue looking very different across orientations and devices. I solved this issue by constraining aspect ratio, and implementing horizontal and vertical align to the Superview (not just the safe area).
