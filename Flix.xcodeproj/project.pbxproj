@@ -23,6 +23,7 @@
 		DD4C25502522A2CD005B677C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C254F2522A2CD005B677C /* MovieCell.swift */; };
 		DD4C25552522A38F005B677C /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C25542522A38F005B677C /* MovieGridCell.swift */; };
 		DD4C25622522ADB4005B677C /* MovieGridDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C25612522ADB4005B677C /* MovieGridDetailsViewController.swift */; };
+		DDBE78B12525ED600023ABFE /* MovieTrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE78B02525ED600023ABFE /* MovieTrailerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DD4C254F2522A2CD005B677C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		DD4C25542522A38F005B677C /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
 		DD4C25612522ADB4005B677C /* MovieGridDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridDetailsViewController.swift; sourceTree = "<group>"; };
+		DDBE78B02525ED600023ABFE /* MovieTrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				DD4C25612522ADB4005B677C /* MovieGridDetailsViewController.swift */,
 				DD20F3F52516E97F00B4D4F9 /* MoviesViewController.swift */,
 				DD4C254A25229F2B005B677C /* MovieGridViewController.swift */,
+				DDBE78B02525ED600023ABFE /* MovieTrailerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBE78B12525ED600023ABFE /* MovieTrailerViewController.swift in Sources */,
 				DD207C77251FD8E200E70FA1 /* MovieDetailsViewController.swift in Sources */,
 				DD20F3C62516E56000B4D4F9 /* AppDelegate.swift in Sources */,
 				DD4C25622522ADB4005B677C /* MovieGridDetailsViewController.swift in Sources */,
