@@ -12,13 +12,16 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 #### BONUS
 - [x] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
-- [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
+- [x] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
 <img src="YOUR_GIF_URL_HERE" width=250><br>
 
 ### Notes
 - While building this portion of the app, I spent three hours stuck on SIGTERM / SIGBRT errors. Eventually, I rebuilt this component of the application twice, realizing that the error wasn't in the code that I wrote or connections that I made, but the order in which I implemented these steps.
+- I also had difficulty getting the trailer to show up correctly. Debugging revealed that I wasn't properly loading the API to retrieve the dictionary with a second issue of not casting the trailer key correctly and programming within closures.
+- If I had more time, I would further develop the movie detail pages with release dates, make the UI more appealing, and figure out how to load the YouTube modal video without loading the entire YouTube video page.
+- I'd also implement functionality that finds related movies for all movies, not just superhero movies
 
 ---
 
