@@ -16,6 +16,10 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
+    @IBAction func didTapPoster(_ sender: UITapGestureRecognizer) {
+    }
+    
+    
     var movie: [String:Any]!
 
     override func viewDidLoad() {
@@ -41,14 +45,18 @@ class MovieDetailsViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Find the selected movie id
+        let movieId = movie["id"] as! Int
+        
+        // Pass the selected movie to the details view controller
+        let trailerViewController = segue.destination as! MovieTrailerViewController
+        trailerViewController.movieId = movieId
     }
-    */
+    
 
 }

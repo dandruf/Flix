@@ -18,9 +18,7 @@ class MovieGridDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
-    // NEED TO FIX TAP GESTURE RECOGNIZER AND SCREEN TRANSITION
     @IBAction func didTapPoster(_ sender: UITapGestureRecognizer) {
-        print(movie["movie_id"] as Any)
     }
 
     override func viewDidLoad() {
@@ -44,8 +42,6 @@ class MovieGridDetailsViewController: UIViewController {
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)!
         backdropView.af.setImage(withURL: backdropUrl)
         
-    
-        
     }
     
 
@@ -57,11 +53,11 @@ class MovieGridDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
         // Find the selected movie id
-        let trailerPath = movie["movie_id"] as! [[String: Any]]
+        let movieId = movie["id"] as! Int
         
         // Pass the selected movie to the details view controller
         let trailerViewController = segue.destination as! MovieTrailerViewController
-//        trailerViewController.trailerPath = trailerPath
+        trailerViewController.movieId = movieId
         
     }
 
