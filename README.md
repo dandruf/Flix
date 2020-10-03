@@ -15,7 +15,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="https://i.imgur.com/ftgeYw8.gif" width=250><br>
 
 ### Notes
 - While building this portion of the app, I spent three hours stuck on SIGTERM / SIGBRT errors. Eventually, I rebuilt this component of the application twice, realizing that the error wasn't in the code that I wrote or connections that I made, but the order in which I implemented these steps.
