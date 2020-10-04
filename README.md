@@ -23,6 +23,17 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - If I had more time, I would further develop the movie detail pages with release dates, make the UI more appealing, and figure out how to load the YouTube modal video without loading the entire YouTube video page.
 - I'd also implement functionality that finds related movies for all movies, not just superhero movies
 
+## Future To-Dos
+Movie Detail Views
+- [x] Add related movies to each movie detail page
+- [x] Implement scrolling functionality if screen content runs over
+- [] Include movie release date
+- [] Fix constraint bugs in console
+- [] Add image fade/gradient to backdrop image
+- [] Load new movie detail view when user taps on related movie poster
+Trailer View
+- [] Skip YouTube landing page when loading modal
+
 ---
 
 ## Flix Part 1
