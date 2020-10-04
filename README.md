@@ -27,9 +27,9 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 Movie Detail Views
 - [x] Add related movies to each movie detail page
 - [x] Implement scrolling functionality if screen content runs over
+- [x] Add image fade/gradient to backdrop image
 - [ ] Include movie release date
 - [ ] Fix constraint bugs in console
-- [ ] Add image fade/gradient to backdrop image
 - [ ] Load new movie detail view when user taps on related movie poster
 
 Trailer View
@@ -53,7 +53,6 @@ Trailer View
 ### App Walkthrough GIF
 <img src="https://i.imgur.com/ai0ahqH.gif" width="250" />
 <img src="https://i.imgur.com/e16PkhD.gif" height="250" />
-<img src="https://i.imgur.com/7DRUTtr.gif" />
 
 ### Notes
 - I originally applied strict leading and trailing constraints to the Launching Storyboard, causing the centered logo to continue looking very different across orientations and devices. I solved this issue by constraining aspect ratio, and implementing horizontal and vertical align to the Superview (not just the safe area).
