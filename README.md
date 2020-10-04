@@ -31,6 +31,7 @@ Movie Detail Views
 - [ ] Fix constraint bugs in console
 - [ ] Add image fade/gradient to backdrop image
 - [ ] Load new movie detail view when user taps on related movie poster
+
 Trailer View
 - [ ] Skip YouTube landing page when loading modal
 
