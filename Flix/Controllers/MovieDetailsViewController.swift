@@ -16,7 +16,7 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
-    // Outlet for poster to segue to movie details
+    // Outlet for poster to segue to movie trailer
     @IBAction func didTapPoster(_ sender: UITapGestureRecognizer) {
     }
     
@@ -24,13 +24,15 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var relatedMoviesLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // Scrollview to contain everything except poster and title
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     // Dictionary provides details of individual movie
     var movie: [String:Any]!
     
-    // List of dictionaries provides posters of related movies
+    // List of dictionaries provides posters of related movies, and segue to related movie details
     var relatedMovies = [[String:Any]]()
 
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +54,6 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         backdropView.af.setImage(withURL: backdropUrl)
         
         // Related Movies Collection View
-        relatedMoviesLabel.text = "Related Movies"
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -62,7 +63,7 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         layout.minimumLineSpacing = 4
         layout.minimumInteritemSpacing = 4
 
-        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 3) / 4
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 3) / 3.5
         layout.itemSize = CGSize(width: width, height: width * 1.5)
         
         let movieId = movie["id"] as! Int
@@ -82,6 +83,12 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
 
               // Get the array of related movies
             self.relatedMovies = dataDictionary["results"] as! [[String : Any]]
+            
+            if self.relatedMovies.isEmpty {
+                self.relatedMoviesLabel.text = ""
+            } else {
+                self.relatedMoviesLabel.text = "Related Movies"
+            }
               
               // Reload your collection view data
             self.collectionView.reloadData()
@@ -103,11 +110,11 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         let relatedMovie = relatedMovies[indexPath.item]
         
         let relatedBaseUrl = "https://image.tmdb.org/t/p/w185"
-        let relatedPosterPath = relatedMovie["poster_path"] as! String
+        let relatedPosterPath = relatedMovie["poster_path"] as? String ?? movie["poster_path"] as! String // I left this optional casting here because there were instances where the movie object existed, but no poster path
         let relatedPosterUrl = URL(string: relatedBaseUrl + relatedPosterPath)!
         
         cell.relatedPosterView.af.setImage(withURL: relatedPosterUrl)
-        
+
         return cell
     }
     
