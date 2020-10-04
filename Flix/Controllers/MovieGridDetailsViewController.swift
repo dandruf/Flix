@@ -18,6 +18,9 @@ class MovieGridDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
+    var gradient: CAGradientLayer!
+
+    // Outlet for poster to segue to movie trailer
     @IBAction func didTapPoster(_ sender: UITapGestureRecognizer) {
     }
 
@@ -42,6 +45,19 @@ class MovieGridDetailsViewController: UIViewController {
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)!
         backdropView.af.setImage(withURL: backdropUrl)
         
+        // Create gradient for backdrop layer
+        gradient = CAGradientLayer()
+        gradient.frame = backdropView.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0, 0.75, 1]
+        backdropView.layer.addSublayer(gradient)
+    }
+    
+    // Keep gradient within bounds even if view is rotated
+    override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+
+            gradient.frame = backdropView.bounds
     }
     
 
