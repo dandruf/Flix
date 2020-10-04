@@ -27,12 +27,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 Movie Detail Views
 - [x] Add related movies to each movie detail page
 - [x] Implement scrolling functionality if screen content runs over
-- [] Include movie release date
-- [] Fix constraint bugs in console
-- [] Add image fade/gradient to backdrop image
-- [] Load new movie detail view when user taps on related movie poster
+- [ ] Include movie release date
+- [ ] Fix constraint bugs in console
+- [ ] Add image fade/gradient to backdrop image
+- [ ] Load new movie detail view when user taps on related movie poster
 Trailer View
-- [] Skip YouTube landing page when loading modal
+- [ ] Skip YouTube landing page when loading modal
 
 ---
 
