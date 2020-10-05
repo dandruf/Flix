@@ -13,7 +13,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] User can view the release date of a specific movie
 
 ### App Walkthrough GIF
-<img src="https://i.imgur.com/ax4Lgg3.gif" width=250><br>
+<img src="/flix-upgrade-walkthrough.gif" width=250><br>
 
 ### Notes
 - With the help of a Codepath TA, I used Objective C to programmatically instantiate a new movie detail view
