@@ -122,7 +122,7 @@
                                 <size key="customSize" width="201" height="265"/>
                                 <connections>
                                     <outlet property="posterView" destination="6Mp-nE-Pqp" id="Sfg-S7-LlC"/>
-                                    <segue destination="nhb-3j-Kqh" kind="push" id="uMA-kg-RfH"/>
+                                    <segue destination="nhb-3j-Kqh" kind="show" id="uMA-kg-RfH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
