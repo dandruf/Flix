@@ -18,21 +18,21 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="https://i.imgur.com/ftgeYw8.gif" width=250><br>
 
 ### Notes
-- While building this portion of the app, I spent three hours stuck on SIGTERM / SIGBRT errors. Eventually, I rebuilt this component of the application twice, realizing that the error wasn't in the code that I wrote or connections that I made, but the order in which I implemented these steps.
+- While building this portion of the app, I spent three hours stuck on SIGTERM / SIGABRT errors. Eventually, I rebuilt this component of the application twice, realizing that the error wasn't in the code that I wrote or connections that I made, but the order in which I implemented these steps.
 - I also had difficulty getting the trailer to show up correctly. Debugging revealed that I wasn't properly loading the API to retrieve the dictionary with a second issue of not casting the trailer key correctly and programming within closures.
 - If I had more time, I would further develop the movie detail pages with release dates, make the UI more appealing, and figure out how to load the YouTube modal video without loading the entire YouTube video page.
 - I'd also implement functionality that finds related movies for all movies, not just superhero movies
 
-## Future To-Dos
-Movie Detail Views
+### Future To-Dos
+#### Movie Detail Views
 - [x] Add related movies to each movie detail page
 - [x] Implement scrolling functionality if screen content runs over
+- [x] Add image fade/gradient to backdrop image
 - [ ] Include movie release date
 - [ ] Fix constraint bugs in console
-- [ ] Add image fade/gradient to backdrop image
 - [ ] Load new movie detail view when user taps on related movie poster
 
-Trailer View
+#### Trailer View
 - [ ] Skip YouTube landing page when loading modal
 
 ---
@@ -53,7 +53,6 @@ Trailer View
 ### App Walkthrough GIF
 <img src="https://i.imgur.com/ai0ahqH.gif" width="250" />
 <img src="https://i.imgur.com/e16PkhD.gif" height="250" />
-<img src="https://i.imgur.com/7DRUTtr.gif" />
 
 ### Notes
 - I originally applied strict leading and trailing constraints to the Launching Storyboard, causing the centered logo to continue looking very different across orientations and devices. I solved this issue by constraining aspect ratio, and implementing horizontal and vertical align to the Superview (not just the safe area).
