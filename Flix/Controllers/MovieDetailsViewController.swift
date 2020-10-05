@@ -34,6 +34,7 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
     
     // List of dictionaries provides posters of related movies, and segue to related movie details
     var relatedMovies = [[String:Any]]()
+    var indexTapped: Int = 0
 
     
     override func viewDidLoad() {
@@ -120,9 +121,26 @@ class MovieDetailsViewController: UIViewController, UICollectionViewDelegate, UI
         return relatedMovies.count
     }
     
+    
+    // @objc makes function have objective C runtime
+    @objc func didTapRelatedPoster(gestureRecognizer: UIGestureRecognizer) {
+        let view = gestureRecognizer.view
+        guard let newView = view else {return}
+        let index = newView.tag
+        let movie = relatedMovies[index]
+        
+        // look at storyboard, look for main storyboard, and instantiate a view controller in main storyboard. identify view controller using unique identifier
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        vc.movie = movie
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RelatedMovieGridCell", for: indexPath) as! RelatedMovieGridCell
-        
+        cell.tag = indexPath.item
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapRelatedPoster(gestureRecognizer:)))
+        cell.addGestureRecognizer(tapGestureRecognizer)
         let relatedMovie = relatedMovies[indexPath.item]
         
         let relatedBaseUrl = "https://image.tmdb.org/t/p/w185"
